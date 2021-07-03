@@ -101,6 +101,6 @@ app.post("/send",(req,res)=>{
 
 
 //server
-app.listen(3000|| process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`server started at port 3000`)
   })
