@@ -1,0 +1,37 @@
+.menu{
+    background-color: rgb(239, 239, 240);
+    border: 1px rgb(231, 231, 231);
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.menudetail{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 220px;
+    margin-right: 400px;
+}
+
+.menudetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:42%;
+}
+/* 
+.menudetail > h2 {
+    margin-left: 100px;
+} */
+
+/* .balance{
+    margin-left: 150px;
+} */

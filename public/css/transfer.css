@@ -1,0 +1,27 @@
+.send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left:43%;
+}
+
+label{
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+button{
+    margin-left: 10px;
+}
+
+input{
+    font-weight: 600;
+    width: 100px;
+}

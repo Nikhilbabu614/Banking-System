@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/transaction.css">
+    <title>Bank</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <h4 class="transaction_header">Select customer to transfer to</h4>  
+        <div class="transactioncard">
+            <% for(var i=0;i<userdata.length;i++) { %>
+                <div class=" transactiondetails">
+                    <h5><%= userdata[i].name%></h5>
+                    <form action="/send" method="POST">
+                        <input type="hidden" name="sender" value="<%=data.name%>"> 
+                        <input type="hidden" name="amount" value="<%= amount %>">
+                        <input type="hidden" name="reciever" value="<%= userdata[i].name %>">
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+</html>

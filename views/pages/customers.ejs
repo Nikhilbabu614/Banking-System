@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/customers.css">
+    <title>Bank</title>
+</head>
+<body>
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+    <div class="cardheader">
+        <h1>Customers List</h1>
+    </div>
+    <div class="card">
+        <% for(var i=0;i<data.length;i++) { %>
+            <div class="details">
+                <h4><%= data[i].name%></h4>
+                <form action="/profile" method="POST">
+                    <input type="hidden" name="cname" value="<%= data[i].name%>"> 
+                    <button type="submit" class="btn btn-primary">View</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+  
+    <footer>
+        <%- include('../partials/footer') %>
+    </footer>
+</body>
+</html>
